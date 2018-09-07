@@ -94,6 +94,9 @@ h1, h2, h3 {
   h1.heading-light, h2.heading-light, h3.heading-light {
     font-weight: 300; }
 
+p {
+  font-size: 14px; }
+
 main#bg-img {
   background: url(../img/bg.jpg);
   background-size: cover;
