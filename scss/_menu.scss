@@ -30,6 +30,8 @@ nav {
             &.menu-item {
                 padding: 10px 20px;
                 text-align: center;
+                border-right: 1px solid $primary-color;
+                box-sizing: border-box;
 
                 &.active, &.download, &:hover {
                     background: #000;
@@ -38,10 +40,19 @@ nav {
 
                 &:hover {
                     @include easeOut;
+                    border-color: transparent;
                 }
 
                 &.download {
                     margin: 0 185px;
+                }
+
+                &.active, &.download {
+                    border-right: none!important;
+                }
+
+                &:last-child {
+                    border-right: none;
                 }
 
             }

@@ -58,4 +58,25 @@
       padding: 0px;
     }
   }
+
+  nav {
+    padding: 20px 0;
+
+    &.menu {
+      display: block;
+      
+      ul.menu-nav {
+        flex-direction: column;
+        flex: 1;
+      }
+
+      ul.menu-dl {
+       justify-content: flex-start;
+
+       li.download {
+         margin: 5px 10px;
+       }
+      }
+    }
+  }
 }
