@@ -28,6 +28,30 @@ nav {
         nav ul li.menu-item.download {
           margin: 0 185px; }
 
+div.floating-nav {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  z-index: 4; }
+  div.floating-nav ul.menu-nav {
+    justify-content: center; }
+    div.floating-nav ul.menu-nav li.menu-item {
+      list-style-type: none;
+      padding: 10px;
+      border-radius: 50%;
+      text-align: center; }
+      div.floating-nav ul.menu-nav li.menu-item.active {
+        background-color: transparent; }
+        div.floating-nav ul.menu-nav li.menu-item.active a {
+          transition: all 0.5s ease-out;
+          padding: 10px; }
+      div.floating-nav ul.menu-nav li.menu-item a {
+        font: 0/0 a;
+        background: #fff;
+        padding: 7px;
+        margin: 10px;
+        border-radius: 50%; }
+
 * {
   box-sizing: border-box; }
 
@@ -66,7 +90,9 @@ h1, h2, h3 {
 main#bg-img {
   background: url(../img/bg.jpg);
   background-size: cover;
-  background-attachment: scroll; }
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: right; }
   main#bg-img:after {
     content: '';
     position: absolute;

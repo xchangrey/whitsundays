@@ -16,6 +16,8 @@ $font-family: 'Open Sans', sans-serif;
         background: $home-image;
         background-size: cover;
         background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-position: right;
         &:after  {
           content:'';
           position: absolute;

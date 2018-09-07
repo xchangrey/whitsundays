@@ -1,0 +1,34 @@
+div.floating-nav {
+  position: fixed;
+  top:45%;
+  right: 0;
+  z-index: 4;
+
+  ul.menu-nav {
+    justify-content: center;
+
+    li.menu-item {
+      list-style-type: none;
+      padding: 10px;
+      border-radius: 50%;
+      text-align: center;
+
+      &.active {
+        background-color: transparent;
+
+        a {
+          @include easeOut;
+          padding: 10px;
+        }
+      }
+
+      a {
+        font:0/0 a;
+        background: $primary-color;
+        padding: 7px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
