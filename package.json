@@ -1,0 +1,14 @@
+{
+  "name": "whitsundays",
+  "version": "1.0.0",
+  "description": "a converted site from psd to html",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Christian Geroy",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

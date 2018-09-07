@@ -1,0 +1,101 @@
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing : border-box;
+}
+
+body {
+    background: transparent;
+    color: $primary-color;
+    margin: 0;
+    font-family: $font-family;
+    font-size: 13px;
+}
+
+header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+h1,h2,h3 {
+    margin: 0;
+    line-height: 0.8;
+
+    &.lg-heading {
+        font-size: 4.3rem;
+    }
+
+    &.md-heading {
+        font-size: 3rem;
+    }
+
+    &.sm-heading {
+        font-size: 1.7rem;
+    }
+}
+
+main {
+    @include background;
+}
+
+section {
+    height: 100vh;
+    padding: 50px;
+
+    &#home {
+        display: flex;
+        align-items: center;
+
+        div {
+            padding: 50px;
+
+            &.banner-text {
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &#solution {
+        
+        background: rgba(248,80,50,1);
+        background: -moz-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(255,255,255,1) 0%, rgba(60,134,130,1) 82%, rgba(43,127,130,1) 85%, rgba(14,115,130,1) 90%, rgba(14,115,130,1) 98%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,1)), color-stop(0%, rgba(255,255,255,1)), color-stop(82%, rgba(60,134,130,1)), color-stop(85%, rgba(43,127,130,1)), color-stop(90%, rgba(14,115,130,1)), color-stop(98%, rgba(14,115,130,1)));
+        background: -webkit-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(255,255,255,1) 0%, rgba(60,134,130,1) 82%, rgba(43,127,130,1) 85%, rgba(14,115,130,1) 90%, rgba(14,115,130,1) 98%);
+        background: -o-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(255,255,255,1) 0%, rgba(60,134,130,1) 82%, rgba(43,127,130,1) 85%, rgba(14,115,130,1) 90%, rgba(14,115,130,1) 98%);
+        background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(255,255,255,1) 0%, rgba(60,134,130,1) 82%, rgba(43,127,130,1) 85%, rgba(14,115,130,1) 90%, rgba(14,115,130,1) 98%);
+        background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(255,255,255,1) 0%, rgba(60,134,130,1) 82%, rgba(43,127,130,1) 85%, rgba(14,115,130,1) 90%, rgba(14,115,130,1) 98%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#0e7382', GradientType=0 );
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div.sol-content {
+            flex: 1;
+
+            &.banner-text {
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            h1, h2, h3 {
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+
+
+
+@import 'mobile';
