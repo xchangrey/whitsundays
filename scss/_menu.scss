@@ -28,13 +28,20 @@ nav {
             list-style-type: none;
 
             &.menu-item {
-                padding: 10px 15px;
+                padding: 10px 20px;
                 text-align: center;
 
                 &.active, &.download, &:hover {
                     background: #000;
-                    padding: 10px 15px;
                     border-radius: 7px;
+                }
+
+                &:hover {
+                    @include easeOut;
+                }
+
+                &.download {
+                    margin: 0 185px;
                 }
 
             }

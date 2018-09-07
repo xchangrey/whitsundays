@@ -1,0 +1,61 @@
+//Widescreens
+
+@include mediaXl {
+  
+}
+
+//Desktops & Laptops
+@include mediaLg {
+  h1.lg-heading {
+    font-size: 2.5rem;
+  }
+
+  h2.md-heading {
+    font-size: 1.5rem;
+  }
+
+  h3.sm-heading {
+    font-size: 1rem;
+  }
+
+  section#solution div.sol-content {
+      padding: 20px;
+    }
+}
+
+//Tablets & Notebooks
+@include mediaMd {
+  h1.lg-heading {
+    font-size: 2.5rem;
+  }
+
+  h2.md-heading {
+    font-size: 1.5rem;
+  }
+
+  h3.sm-heading {
+    font-size: 1rem;
+  }
+
+  section#solution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div.sol-content {
+      padding: 20px;
+    }
+  }
+}
+
+//Smartphones
+@include mediaSm {
+  section#solution {
+    display: block;
+
+    div.sol-content {
+      padding: 0px;
+    }
+  }
+}

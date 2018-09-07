@@ -9,6 +9,7 @@
   "author": "Christian Geroy",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "storm-scroll-spy": "^1.1.4"
   }
 }

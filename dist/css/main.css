@@ -18,12 +18,15 @@ nav {
     nav ul li {
       list-style-type: none; }
       nav ul li.menu-item {
-        padding: 10px 15px;
+        padding: 10px 20px;
         text-align: center; }
         nav ul li.menu-item.active, nav ul li.menu-item.download, nav ul li.menu-item:hover {
           background: #000;
-          padding: 10px 15px;
           border-radius: 7px; }
+        nav ul li.menu-item:hover {
+          transition: all 0.5s ease-out; }
+        nav ul li.menu-item.download {
+          margin: 0 185px; }
 
 * {
   box-sizing: border-box; }
@@ -55,13 +58,17 @@ h1, h2, h3 {
     font-size: 3rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     font-size: 1.7rem; }
+  h1.heading-left, h2.heading-left, h3.heading-left {
+    padding-left: 70px; }
+  h1.heading-light, h2.heading-light, h3.heading-light {
+    font-weight: 300; }
 
 main#bg-img {
-  background: url(../img/body-img.jpg);
+  background: url(../img/bg.jpg);
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: scroll; }
   main#bg-img:after {
-    content: url(../img/overlay.png);
+    content: '';
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -80,24 +87,59 @@ section {
     section#home div {
       padding: 50px; }
       section#home div.banner-text {
-        text-align: center;
+        text-align: left;
         text-transform: uppercase; }
   section#solution {
-    background: #f85032;
-    background: -moz-linear-gradient(top, #f85032 0%, white 0%, #3c8682 82%, #2b7f82 85%, #0e7382 90%, #0e7382 98%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f85032), color-stop(0%, white), color-stop(82%, #3c8682), color-stop(85%, #2b7f82), color-stop(90%, #0e7382), color-stop(98%, #0e7382));
-    background: -webkit-linear-gradient(top, #f85032 0%, white 0%, #3c8682 82%, #2b7f82 85%, #0e7382 90%, #0e7382 98%);
-    background: -o-linear-gradient(top, #f85032 0%, white 0%, #3c8682 82%, #2b7f82 85%, #0e7382 90%, #0e7382 98%);
-    background: -ms-linear-gradient(top, #f85032 0%, white 0%, #3c8682 82%, #2b7f82 85%, #0e7382 90%, #0e7382 98%);
-    background: linear-gradient(to bottom, #f85032 0%, white 0%, #3c8682 82%, #2b7f82 85%, #0e7382 90%, #0e7382 98%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#0e7382', GradientType=0 );
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    background: #0e363e;
+    background: linear-gradient(0deg, #0e363e 38%, rgba(0, 0, 0, 0) 100%); }
+    section#solution div.sol-content {
+      padding: 0 150px; }
+      section#solution div.sol-content.banner-text {
+        text-transform: uppercase;
+        text-align: left; }
+      section#solution div.sol-content.stack {
+        margin-right: 100px; }
+        section#solution div.sol-content.stack h1, section#solution div.sol-content.stack h2, section#solution div.sol-content.stack h3 {
+          line-height: 1.2; }
+        section#solution div.sol-content.stack div {
+          margin-bottom: 30px; }
+  section#third {
+    background: #164559;
+    background: linear-gradient(0deg, #164559 13%, #0e363e 100%); }
+  section#fourth {
+    background: #164559;
+    background: linear-gradient(0deg, #164559 15%, #154255 100%); }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  h1.lg-heading {
+    font-size: 2.5rem; }
+  h2.md-heading {
+    font-size: 1.5rem; }
+  h3.sm-heading {
+    font-size: 1rem; }
+  section#solution div.sol-content {
+    padding: 20px; } }
+
+@media screen and (max-width: 768px) {
+  h1.lg-heading {
+    font-size: 2.5rem; }
+  h2.md-heading {
+    font-size: 1.5rem; }
+  h3.sm-heading {
+    font-size: 1rem; }
+  section#solution {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center; }
     section#solution div.sol-content {
-      flex: 1; }
-      section#solution div.sol-content.banner-text {
-        text-align: center;
-        text-transform: uppercase; }
-      section#solution div.sol-content h1, section#solution div.sol-content h2, section#solution div.sol-content h3 {
-        line-height: 1.2; }
+      padding: 20px; } }
+
+@media screen and (max-width: 500px) {
+  section#solution {
+    display: block; }
+    section#solution div.sol-content {
+      padding: 0px; } }
