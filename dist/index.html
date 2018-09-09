@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
@@ -13,21 +16,21 @@
 <body id="body-img">
     <header>
         <nav class="menu">
-            <ul class="menu-nav js-scroll-spy">
+            <ul class="menu-nav">
                 <li class="menu-item active">
                     <a href="#home" class="nav-link"><i class="fas fa-play"></i></a>
                 </li>
                 <li class="menu-item">
-                    <a href="#solution" class="nav-link">Background & Challenge</a>
+                    <a href="#bg-challenge" class="nav-link">Background & Challenge</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#third" class="nav-link">Solution</a>
+                    <a href="#solution" class="nav-link">Solution</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#fourth" class="nav-link">Results & Effectiveness</a>
+                    <a href="#results" class="nav-link">Results & Effectiveness</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#fifth" class="nav-link">Slideshow</a>
+                    <a href="#slideshow" class="nav-link">Slideshow</a>
                 </li>
             </ul>
             <ul class="menu-dl">
@@ -55,13 +58,13 @@
                     <h3 class="sm-heading">a movie that's waiting to happen</h3>
                 </div>
             </section>
-            <section id="solution" class="section">
-                <div class="sol-content banner-text">
+            <section id="bg-challenge" class="section">
+                <div class="bg-challenge-content banner-text">
                     <h2 class="md-heading heading-left">The</h2>
                     <h1 class="lg-heading">whitsundays</h1>
                     <h3 class="sm-heading">a movie that's waiting to happen</h3>
                 </div>
-                <div class="sol-content stack">
+                <div class="bg-challenge-content stack">
                     <div>
                         <h2 class="md-heading">Background <br>& Audience</h2>
                         <p>Tourism and & events Queensland wanted to increase consideration of The Whitsundays amongst 'social fun seekers'; digitally savvy consumers that socialise substantially online.</p>
@@ -76,11 +79,85 @@
                     </div>
                 </div>
             </section>
-            <section id="third" class="section">
-
+            <section id="solution" class="section">
+                <h2 class="md-heading">Solution</h2>
+                <div class="sol-content">
+                    <div>
+                        <p>We knew movies rated high on the list of our target's interests and, with incredible beaches, seaplanes, yachts and glamorous locations, the Whitsundays is the perfect setting for a movie.</p>
+                        <p>So we invited Australians to write it:</p>
+                        <p class="lead">The Whitsundays.<br>A movie that's waiting to be written.   </p>
+                        <p>We enlisted world-renowned screenwriter Craig Pearce as Script Supervisor. Then for 20 days we posted a daily storyboard image on Facebook and Instagram, inviting the public to write scenes for a chance  to win a $10,000 luxury holiday.</p>
+                    </div>
+                    <div>
+                        <p>The campaign launched with a trailer, radio and online advertising.</p>
+                        <p>We reacted to the storyline as it developed, selecting and treating images according to the previous winnig scene.</p>
+                        <p>Each scene written and shared became a compelling "ad" for the Whitsundays.</p>
+                        <p>Together, a Hollywood screenwriter and Australian public had created the world's first crowd-sourced movie storyboard and a story universe with millions of possible permutations.</p>
+                    </div>
+                </div>
             </section>
-            <section id="fourth" class="section">
-
+            <section id="results" class="section">
+                <div id="tabbed-content">
+                    <ul class="tabs">
+                        <li class="tab-link active" data-tab="tab-1">Video</li>
+                        <li class="tab-link" data-tab="tab-2">Photography</li>
+                        <li class="tab-link" data-tab="tab-3">Social</li>
+                        <li class="tab-link" data-tab="tab-4">PR</li>
+                        <li class="tab-link" data-tab="tab-5">Radio</li>
+                    </ul>
+                
+                    <div id="tab-1" class="tab-content active">
+                        <div class="tab-media-content">
+                            <div class="video-frame">
+                                <iframe width="300" height="180" src="https://www.youtube.com/embed/BjIcqPRI87A?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-text">
+                                <h3 class="sm-heading">Video</h3>
+                                <p>A 60-second promotional movie trailer played on TV, online as pre rolls and via Facebook, to promote the movie that was waiting to be written to our movie-loving target audience, and encourge them to enter.</p>
+                                <p class="link"><a href="https://youtu.be/BjIcqPRI87A" target="_blank">view project</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab tab-content">
+                         <div class="tab-media-content">
+                             <div class="video-text">
+                                 <h3 class="sm-heading">Photography</h3>
+                                 <p>Shots posted on Facebook and Instagram every day inspired thousands of entries. We reacted to the storyline as it developed in real time, selecting and treating the next image according to the day's winning scene.</p>
+                                 <p class="link"><a href="https://youtu.be/BjIcqPRI87A" target="_blank">view project</a></p>
+                             </div>
+                         </div>
+                    </div>
+                    <div id="tab-3" class="tab tab-content">
+                        <div class="tab-media-content">
+                            <div class="video-text">
+                                <h3 class="sm-heading">Social</h3>
+                                <p>The complete movie storyboard showcased the entire story, completely inspired by stunning images captured in the Whitsundays, with all 20 winning scenes accompanying the images.</p>
+                                <p class="link"><a href="https://youtu.be/BjIcqPRI87A" target="_blank">view project</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tab tab-content">
+                        <div class="tab-media-content">
+                            <div class="video-text">
+                                <h3 class="sm-heading">PR</h3>
+                                <p>We enlisted the help of Craig Pearce as script supervisor, who was tasked with choosing the winner each day to ensure the story flowed properly, and providing daily writing tips to encourage people to take part.</p>
+                                <p class="link"><a href="https://youtu.be/BjIcqPRI87A" target="_blank">view project</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tab tab-content">
+                        <div class="tab-media-content">
+                            <div class="video-frame">
+                                <iframe width="300" height="180" src="https://www.youtube.com/embed/BjIcqPRI87A?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-text">
+                                <h3 class="sm-heading">Radio</h3>
+                                <p>Live reads from NOVA presenters reflected the ever-evolving story of Jake in real time, and encouraged people to get involved to shape the story of themselves.</p>
+                                <p class="link"><a href="https://youtu.be/BjIcqPRI87A" target="_blank">view project</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
     </main>
     <div class="floating-nav">
@@ -89,22 +166,21 @@
                 <a href="#home" class="nav-link">Play</a>
             </li>
             <li class="menu-item">
-                <a href="#solution" class="nav-link">Background & Challenge</a>
+                <a href="#bg-challenge" class="nav-link">Background & Challenge</a>
             </li>
             <li class="menu-item">
-                <a href="#third" class="nav-link">Solution</a>
+                <a href="#solution" class="nav-link">Solution</a>
             </li>
             <li class="menu-item">
-                <a href="#fourth" class="nav-link">Results & Effectiveness</a>
+                <a href="#results" class="nav-link">Results & Effectiveness</a>
             </li>
             <li class="menu-item">
-                <a href="#fifth" class="nav-link">Slideshow</a>
+                <a href="#slideshow" class="nav-link">Slideshow</a>
             </li>
         </ul>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    </script>
 <script src="main.js"></script>
 </body>
 </html>

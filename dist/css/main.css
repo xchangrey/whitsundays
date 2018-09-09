@@ -37,7 +37,7 @@ nav {
 
 div.floating-nav {
   position: fixed;
-  top: 45%;
+  top: 40%;
   right: 0;
   z-index: 4; }
   div.floating-nav ul.menu-nav {
@@ -50,14 +50,60 @@ div.floating-nav {
       div.floating-nav ul.menu-nav li.menu-item.active {
         background-color: transparent; }
         div.floating-nav ul.menu-nav li.menu-item.active a {
-          transition: all 0.5s ease-out;
-          padding: 10px; }
+          transition: all 0.5s ease-out; }
       div.floating-nav ul.menu-nav li.menu-item a {
         font: 0/0 a;
         background: #fff;
         padding: 7px;
         margin: 10px;
         border-radius: 50%; }
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; }
+  ul.tabs li {
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer; }
+    ul.tabs li.active {
+      background: #333;
+      border-radius: 7px; }
+
+div.tab-content {
+  display: none;
+  padding: 15px;
+  width: 800px;
+  margin-top: 30px; }
+  div.tab-content.active {
+    display: block; }
+  div.tab-content div.tab-media-content {
+    display: flex;
+    flex-direction: row;
+    min-height: 430px; }
+    div.tab-content div.tab-media-content div.video-text {
+      position: relative;
+      padding: 0 3rem; }
+      div.tab-content div.tab-media-content div.video-text h3 {
+        padding-bottom: 3.5rem; }
+    div.tab-content div.tab-media-content div.video-frame, div.tab-content div.tab-media-content div.video-text {
+      flex: 1; }
+      div.tab-content div.tab-media-content div.video-frame p.link, div.tab-content div.tab-media-content div.video-text p.link {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center; }
+        div.tab-content div.tab-media-content div.video-frame p.link a, div.tab-content div.tab-media-content div.video-text p.link a {
+          padding: 10px 30px;
+          background: #11a4e4;
+          border-radius: 7px; }
+          div.tab-content div.tab-media-content div.video-frame p.link a:hover, div.tab-content div.tab-media-content div.video-text p.link a:hover {
+            background: #1099d6;
+            transition: all 0.5s ease-out; }
 
 * {
   box-sizing: border-box; }
@@ -96,6 +142,8 @@ h1, h2, h3 {
 
 p {
   font-size: 14px; }
+  p.lead {
+    font-size: 1.5rem; }
 
 main#bg-img {
   background: url(../img/bg.jpg);
@@ -125,29 +173,45 @@ section {
       section#home div.banner-text {
         text-align: left;
         text-transform: uppercase; }
-  section#solution {
+  section#bg-challenge {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     background: #0e363e;
     background: linear-gradient(0deg, #0e363e 38%, rgba(0, 0, 0, 0) 100%); }
-    section#solution div.sol-content {
+    section#bg-challenge div.bg-challenge-content {
       padding: 0 80px; }
-      section#solution div.sol-content.banner-text {
+      section#bg-challenge div.bg-challenge-content.banner-text {
         text-transform: uppercase;
         text-align: left; }
-      section#solution div.sol-content.stack {
+      section#bg-challenge div.bg-challenge-content.stack {
         margin-right: 100px; }
-        section#solution div.sol-content.stack h1, section#solution div.sol-content.stack h2, section#solution div.sol-content.stack h3 {
+        section#bg-challenge div.bg-challenge-content.stack h1, section#bg-challenge div.bg-challenge-content.stack h2, section#bg-challenge div.bg-challenge-content.stack h3 {
           line-height: 1.2; }
-        section#solution div.sol-content.stack div {
+        section#bg-challenge div.bg-challenge-content.stack div {
           margin-bottom: 30px; }
-  section#third {
+  section#solution {
     background: #164559;
-    background: linear-gradient(0deg, #164559 13%, #0e363e 100%); }
-  section#fourth {
+    background: linear-gradient(0deg, #164559 13%, #0e363e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 150px; }
+    section#solution h2 {
+      font-weight: 300;
+      margin-bottom: 20px; }
+    section#solution div.sol-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-column-gap: 40px; }
+  section#results {
     background: #164559;
-    background: linear-gradient(0deg, #164559 15%, #154255 100%); }
+    background: linear-gradient(0deg, #164559 15%, #154255 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   h1.lg-heading {
@@ -156,7 +220,7 @@ section {
     font-size: 1.5rem; }
   h3.sm-heading {
     font-size: 1rem; }
-  section#solution div.sol-content {
+  section#bg-challenge div.bg-challenge-content {
     padding: 20px; } }
 
 @media screen and (max-width: 768px) {
@@ -166,18 +230,18 @@ section {
     font-size: 1.5rem; }
   h3.sm-heading {
     font-size: 1rem; }
-  section#solution {
+  section#bg-challenge {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    section#solution div.sol-content {
+    section#bg-challenge div.bg-challenge-content {
       padding: 20px; } }
 
 @media screen and (max-width: 500px) {
-  section#solution {
+  section#bg-challenge {
     display: block; }
-    section#solution div.sol-content {
+    section#bg-challenge div.bg-challenge-content {
       padding: 0px; }
   nav {
     padding: 20px 0; }

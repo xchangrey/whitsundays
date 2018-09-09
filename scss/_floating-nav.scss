@@ -1,6 +1,6 @@
 div.floating-nav {
   position: fixed;
-  top:45%;
+  top:40%;
   right: 0;
   z-index: 4;
 
@@ -18,7 +18,6 @@ div.floating-nav {
 
         a {
           @include easeOut;
-          padding: 10px;
         }
       }
 
