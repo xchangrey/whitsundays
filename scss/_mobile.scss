@@ -37,6 +37,50 @@
     font-size: 1rem;
   }
 
+  header {
+    min-height: 50px;
+
+    a.menu-btn {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      padding: 5px 25px;
+    }
+
+    nav.menu {
+      display: none;
+  
+      ul.menu-nav {
+        list-style: none;
+        margin-top: 35px;
+        padding: 0;
+        display: block;
+  
+        li.menu-item {
+          text-align:center;
+          padding: 10px 15px;
+          border: none;
+
+          &.active {
+            @include easeOut;
+            background: #000;
+          }
+        }
+      }
+
+      ul.menu-dl li.download {
+        margin: 0;
+      }
+    }
+  }
+  
+  
+
+  // header nav.menu {
+  //   display: none;
+  // }
+
   section#bg-challenge {
     display: flex;
     flex-direction: column;
@@ -94,6 +138,10 @@
 
     div.bg-challenge-content {
       padding: 0px 0 20px;
+
+      &.stack {
+        margin-right: 0;
+      }
     }
   }
 

@@ -37,6 +37,15 @@ $(document).ready(function() {
 
 		$(this).addClass('active');
 		$("#"+tab_id).addClass('active');
+    })
+    
+    // Nav Collapse 
+
+    $(".menu-btn").click(function(){
+        $('.menu').toggle(500);
+        scrollLink.click(function(){
+            $('.menu').hide();
+        })
 	})
 
 })

@@ -125,8 +125,10 @@ header {
   position: fixed;
   z-index: 3;
   width: 100%;
-  height: 100px;
-  top: 0; }
+  top: 0;
+  background: #333; }
+  header a.menu-btn {
+    display: none; }
 
 a {
   color: #fff;
@@ -241,6 +243,30 @@ section {
     font-size: 1.5rem; }
   h3.sm-heading {
     font-size: 1rem; }
+  header {
+    min-height: 50px; }
+    header a.menu-btn {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      padding: 5px 25px; }
+    header nav.menu {
+      display: none; }
+      header nav.menu ul.menu-nav {
+        list-style: none;
+        margin-top: 35px;
+        padding: 0;
+        display: block; }
+        header nav.menu ul.menu-nav li.menu-item {
+          text-align: center;
+          padding: 10px 15px;
+          border: none; }
+          header nav.menu ul.menu-nav li.menu-item.active {
+            transition: all 0.5s ease-out;
+            background: #000; }
+      header nav.menu ul.menu-dl li.download {
+        margin: 0; }
   section#bg-challenge {
     display: flex;
     flex-direction: column;
@@ -276,6 +302,8 @@ section {
     display: block; }
     section#bg-challenge div.bg-challenge-content {
       padding: 0px 0 20px; }
+      section#bg-challenge div.bg-challenge-content.stack {
+        margin-right: 0; }
   section#home div {
     padding: 0; }
   section#solution {
