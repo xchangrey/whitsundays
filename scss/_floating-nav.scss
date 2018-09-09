@@ -18,6 +18,7 @@ div.floating-nav {
 
         a {
           @include easeOut;
+          box-shadow: 0px 0px 8px 3px rgba($primary-color, $md-opacity);
         }
       }
 

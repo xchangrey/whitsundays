@@ -50,7 +50,8 @@ div.floating-nav {
       div.floating-nav ul.menu-nav li.menu-item.active {
         background-color: transparent; }
         div.floating-nav ul.menu-nav li.menu-item.active a {
-          transition: all 0.5s ease-out; }
+          transition: all 0.5s ease-out;
+          box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.6); }
       div.floating-nav ul.menu-nav li.menu-item a {
         font: 0/0 a;
         background: #fff;
@@ -69,9 +70,11 @@ ul.tabs {
     color: #fff;
     padding: 10px 15px;
     cursor: pointer; }
-    ul.tabs li.active {
+    ul.tabs li.active, ul.tabs li:hover {
       background: #333;
       border-radius: 7px; }
+    ul.tabs li:hover {
+      transition: all 0.5s ease-out; }
 
 div.tab-content {
   display: none;
@@ -88,9 +91,12 @@ div.tab-content {
       position: relative;
       padding: 0 3rem; }
       div.tab-content div.tab-media-content div.video-text h3 {
-        padding-bottom: 3.5rem; }
+        padding-bottom: 3.5rem;
+        font-weight: 300; }
     div.tab-content div.tab-media-content div.video-frame, div.tab-content div.tab-media-content div.video-text {
       flex: 1; }
+      div.tab-content div.tab-media-content div.video-frame.social, div.tab-content div.tab-media-content div.video-frame.video, div.tab-content div.tab-media-content div.video-frame.photo, div.tab-content div.tab-media-content div.video-frame.pr, div.tab-content div.tab-media-content div.video-frame.radio, div.tab-content div.tab-media-content div.video-text.social, div.tab-content div.tab-media-content div.video-text.video, div.tab-content div.tab-media-content div.video-text.photo, div.tab-content div.tab-media-content div.video-text.pr, div.tab-content div.tab-media-content div.video-text.radio {
+        flex: 2; }
       div.tab-content div.tab-media-content div.video-frame p.link, div.tab-content div.tab-media-content div.video-text p.link {
         bottom: 0;
         position: absolute;
@@ -144,6 +150,11 @@ p {
   font-size: 14px; }
   p.lead {
     font-size: 1.5rem; }
+
+img {
+  max-width: 100%; }
+  img.img-border {
+    border-radius: 7px; }
 
 main#bg-img {
   background: url(../img/bg.jpg);
@@ -236,13 +247,57 @@ section {
     align-items: center;
     justify-content: center; }
     section#bg-challenge div.bg-challenge-content {
-      padding: 20px; } }
+      padding: 20px 0; }
+  section#solution {
+    display: block;
+    padding: 0 50px; }
+  section#results {
+    display: block; }
+    section#results div.tab-content {
+      width: 100%; }
+      section#results div.tab-content div.tab-media-content {
+        display: block;
+        min-height: auto;
+        height: auto; }
+        section#results div.tab-content div.tab-media-content div.video-frame {
+          text-align: center; }
+        section#results div.tab-content div.tab-media-content div.video-text {
+          padding: 20px 0; }
+          section#results div.tab-content div.tab-media-content div.video-text h3 {
+            padding-bottom: 1rem;
+            font-weight: 400; }
+          section#results div.tab-content div.tab-media-content div.video-text p.link {
+            position: relative;
+            padding-top: 10px;
+            text-align: left; } }
 
 @media screen and (max-width: 500px) {
   section#bg-challenge {
     display: block; }
     section#bg-challenge div.bg-challenge-content {
-      padding: 0px; }
+      padding: 0px 0 20px; }
+  section#home div {
+    padding: 0; }
+  section#solution {
+    display: block;
+    padding: 0 50px; }
+  section#results {
+    display: block; }
+    section#results div.tab-content {
+      width: 100%; }
+      section#results div.tab-content div.tab-media-content {
+        display: block;
+        min-height: auto;
+        height: auto; }
+        section#results div.tab-content div.tab-media-content div.video-text {
+          padding: 20px 0; }
+          section#results div.tab-content div.tab-media-content div.video-text h3 {
+            padding-bottom: 1rem;
+            font-weight: 400; }
+          section#results div.tab-content div.tab-media-content div.video-text p.link {
+            position: relative;
+            padding-top: 10px;
+            text-align: left; }
   nav {
     padding: 20px 0; }
     nav.menu {

@@ -16,8 +16,6 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var scrollbarLocation = $(this).scrollTop();
 
-        console.log(scrollbarLocation);
-
         scrollLink.each(function() {
             var scrolltop = $(this.hash).position().top - 20;
             var sectionOffset = scrolltop;

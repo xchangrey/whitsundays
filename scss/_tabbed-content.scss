@@ -5,10 +5,6 @@ ul.tabs {
     list-style: none;
     display: flex;
     justify-content: center;
-    // position: absolute;
-    // top: 140px;
-    // left: 0;
-    // right: 0;
 
     li {
         background: none;
@@ -16,9 +12,13 @@ ul.tabs {
         padding: 10px 15px;
         cursor: pointer;
 
-        &.active {
+        &.active, &:hover {
             background: $dark-color;
             border-radius: 7px;
+        }
+
+        &:hover {
+            @include easeOut;
         }
     }
 }
@@ -44,11 +44,16 @@ div.tab-content {
 
             h3 {
                 padding-bottom: 3.5rem;
+                font-weight: 300;
             }
         }
 
         div.video-frame, div.video-text {
             flex: 1;
+
+            &.social, &.video, &.photo, &.pr, &.radio {
+                flex: 2;
+            }
 
             p.link {
                 bottom: 0;

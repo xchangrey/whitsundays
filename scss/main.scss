@@ -61,6 +61,14 @@ p {
     }
 }
 
+img {
+    max-width: 100%;
+
+    &.img-border {
+        border-radius: 7px;
+    }
+}
+
 main {
     @include background;
 }
