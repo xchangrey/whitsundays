@@ -29,7 +29,7 @@ nav {
           transition: all 0.5s ease-out;
           border-color: transparent; }
         nav ul li.menu-item.download {
-          margin: 0 185px; }
+          margin: 0 130px; }
         nav ul li.menu-item.active, nav ul li.menu-item.download {
           border-right: none !important; }
         nav ul li.menu-item:last-child {
@@ -132,7 +132,7 @@ section {
     background: #0e363e;
     background: linear-gradient(0deg, #0e363e 38%, rgba(0, 0, 0, 0) 100%); }
     section#solution div.sol-content {
-      padding: 0 150px; }
+      padding: 0 80px; }
       section#solution div.sol-content.banner-text {
         text-transform: uppercase;
         text-align: left; }
