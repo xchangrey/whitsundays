@@ -302,7 +302,8 @@ section {
     font-size: 1rem;
     font-style: italic; }
   h3.sm-heading {
-    font-size: 0.8rem; }
+    font-size: 0.9rem;
+    font-weight: 700; }
   section {
     height: auto;
     min-height: 100vh; }
@@ -344,4 +345,5 @@ section {
       nav.menu ul.menu-dl {
         justify-content: flex-start; }
         nav.menu ul.menu-dl li.download {
-          margin: 5px 10px; } }
+          margin: 5px 10px;
+          background: transparent; } }

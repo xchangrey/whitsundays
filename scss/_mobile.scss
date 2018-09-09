@@ -140,7 +140,8 @@
   }
 
   h3.sm-heading {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 700;
   }
 
   section {
@@ -214,6 +215,7 @@
 
        li.download {
          margin: 5px 10px;
+         background: transparent;
        }
       }
     }
