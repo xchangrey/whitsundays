@@ -133,6 +133,21 @@
 
 //Smartphones
 @include mediaSm {
+
+  p.lead {
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  h3.sm-heading {
+    font-size: 0.8rem;
+  }
+
+  section {
+    height: auto;
+    min-height: 100vh;
+  }
+
   section#bg-challenge {
     display: block;
 
